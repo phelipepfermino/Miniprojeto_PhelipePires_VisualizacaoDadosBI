@@ -146,9 +146,16 @@ A qualidade dos dados é importante porque valores nulos, duplicatas, categorias
 
 ## Insights obtidos
 
-1. A base original possui grande volume de registros, com 830000 linhas.
-2. Foram encontradas 4 colunas totalmente vazias, que foram removidas.
-3. Foram identificados registros duplicados, que foram removidos da base limpa.
-4. A categoria `ALIMENTOS` apresentou a maior quantidade de compras.
-5. O agrupamento por gênero permitiu comparar o volume de compras entre clientes femininos e masculinos.
-6. A análise por mês mostrou a distribuição das compras ao longo do tempo.
+## Insights obtidos
+
+1. A base original possui 830000 registros. Após a remoção de duplicatas, a base limpa ficou com 733447 registros. Foram removidos 96553 registros duplicados, o que representa aproximadamente 11,63% da base original.
+
+2. A base limpa representa aproximadamente 88,37% da base original. Isso mostra que a maior parte dos registros foi preservada, mas havia uma quantidade relevante de duplicidades.
+
+3. A categoria com maior quantidade de compras foi `ALIMENTOS`, com 384197 registros, representando aproximadamente 52,38% da base limpa. Em seguida aparecem `HIGIENE`, com 137702 registros, cerca de 18,77%, e `LIMPEZA`, com 128632 registros, cerca de 17,54%.
+
+4. Foram encontrados 3650 registros com categorias vazias ou inválidas na base original, aproximadamente 0,44% do total. Após a limpeza e remoção de duplicatas, a categoria `Sem Categoria` ficou com 3228 registros, também cerca de 0,44% da base limpa.
+
+5. No agrupamento por gênero, os clientes do gênero feminino apresentaram 382427 compras, representando aproximadamente 52,14% da base limpa. Os clientes do gênero masculino apresentaram 351020 compras, cerca de 47,86%.
+
+6. Na análise mensal, o mês com maior quantidade de compras foi outubro de 2021, com 28575 registros, aproximadamente 3,90% da base limpa. Já setembro de 2022 apresentou 1297 registros, cerca de 0,18%, indicando uma queda relevante no volume registrado nesse período.
