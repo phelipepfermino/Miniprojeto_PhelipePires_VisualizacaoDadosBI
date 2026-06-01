@@ -75,15 +75,23 @@ As categorias vazias ou inválidas foram substituídas por `"Sem Categoria"`. Os
 
 ### Sprint 4 - Estatística descritiva
 
-A coluna `cliente_numero_filhos` foi analisada com:
+A coluna `cliente_numero_filhos` foi analisada para entender o perfil familiar dos clientes presentes na base.
 
-* média;
-* mediana;
-* desvio padrão;
-* moda;
-* máximo;
-* mínimo;
-* contagem.
+| Estatística | Resultado |
+|---|---:|
+| Média | 1,15 |
+| Mediana | 0 |
+| Desvio padrão | 1,42 |
+| Moda | 0 |
+| Máximo | 4 |
+| Mínimo | 0 |
+| Contagem | 733447 |
+
+A média de filhos foi de aproximadamente 1,15 por cliente/registro analisado. Porém, a mediana foi 0 e a moda também foi 0, indicando que o valor mais comum na base é cliente sem filhos.
+
+O desvio padrão de aproximadamente 1,42 mostra que existe variação na quantidade de filhos, mas a maioria dos registros está concentrada em valores baixos. O maior valor encontrado foi 4 filhos.
+
+Com isso, é possível observar que, nesta base, o perfil mais frequente é de clientes sem filhos, embora também existam registros de clientes com 1 a 4 filhos.
 
 ### Sprint 5 - Relatório e documentação
 
@@ -146,16 +154,14 @@ A qualidade dos dados é importante porque valores nulos, duplicatas, categorias
 
 ## Insights obtidos
 
-## Insights obtidos
+1. A base original possui 830000 registros. Após a remoção de duplicatas, a base limpa ficou com 733447 registros. Foram removidos 96553 registros duplicados, o que representa aproximadamente 11,63% da base original. Esse percentual mostra que havia uma quantidade relevante de registros repetidos, que poderiam distorcer os agrupamentos.
 
-1. A base original possui 830000 registros. Após a remoção de duplicatas, a base limpa ficou com 733447 registros. Foram removidos 96553 registros duplicados, o que representa aproximadamente 11,63% da base original.
+2. A base limpa representa aproximadamente 88,37% da base original. Isso indica que a maior parte dos dados foi preservada após a limpeza, mantendo uma boa quantidade de informações para análise.
 
-2. A base limpa representa aproximadamente 88,37% da base original. Isso mostra que a maior parte dos registros foi preservada, mas havia uma quantidade relevante de duplicidades.
+3. A categoria com maior quantidade de compras foi `ALIMENTOS`, com 384197 registros, representando aproximadamente 52,38% da base limpa. Isso mostra que mais da metade das compras registradas está concentrada nessa categoria.
 
-3. A categoria com maior quantidade de compras foi `ALIMENTOS`, com 384197 registros, representando aproximadamente 52,38% da base limpa. Em seguida aparecem `HIGIENE`, com 137702 registros, cerca de 18,77%, e `LIMPEZA`, com 128632 registros, cerca de 17,54%.
+4. As categorias `HIGIENE` e `LIMPEZA` também tiveram participação relevante, com 137702 registros e 128632 registros, respectivamente. Juntas, elas representam aproximadamente 36,31% da base limpa, reforçando que a base está fortemente concentrada em produtos de consumo recorrente.
 
-4. Foram encontrados 3650 registros com categorias vazias ou inválidas na base original, aproximadamente 0,44% do total. Após a limpeza e remoção de duplicatas, a categoria `Sem Categoria` ficou com 3228 registros, também cerca de 0,44% da base limpa.
+5. No agrupamento por gênero, os clientes do gênero feminino apresentaram 382427 compras, aproximadamente 52,14% da base limpa. Os clientes do gênero masculino apresentaram 351020 compras, cerca de 47,86%. A diferença existe, mas não é extremamente alta, indicando uma distribuição relativamente equilibrada entre os gêneros.
 
-5. No agrupamento por gênero, os clientes do gênero feminino apresentaram 382427 compras, representando aproximadamente 52,14% da base limpa. Os clientes do gênero masculino apresentaram 351020 compras, cerca de 47,86%.
-
-6. Na análise mensal, o mês com maior quantidade de compras foi outubro de 2021, com 28575 registros, aproximadamente 3,90% da base limpa. Já setembro de 2022 apresentou 1297 registros, cerca de 0,18%, indicando uma queda relevante no volume registrado nesse período.
+6. Na análise mensal, outubro de 2021 teve o maior volume de compras, com 28575 registros, aproximadamente 3,90% da base limpa. Já setembro de 2022 teve apenas 1297 registros, cerca de 0,18%, indicando uma queda forte no volume registrado nesse período. Esse ponto poderia ser investigado em uma análise futura para verificar se houve redução real de vendas, falha de registro ou base incompleta.
