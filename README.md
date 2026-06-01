@@ -154,14 +154,14 @@ A qualidade dos dados é importante porque valores nulos, duplicatas, categorias
 
 ## Insights obtidos
 
-1. A base original possui 830000 registros. Após a remoção de duplicatas, a base limpa ficou com 733447 registros. Foram removidos 96553 registros duplicados, o que representa aproximadamente 11,63% da base original. Esse percentual mostra que havia uma quantidade relevante de registros repetidos, que poderiam distorcer os agrupamentos.
+1. A base original possui 830000 registros. Após a remoção de duplicatas, a base limpa ficou com 733447 registros. Foram removidos 96553 registros duplicados, o que representa aproximadamente 11,63% da base original. Esse percentual mostra que havia uma quantidade relevante de registros repetidos, que poderiam distorcer a análise caso fossem mantidos.
 
-2. A base limpa representa aproximadamente 88,37% da base original. Isso indica que a maior parte dos dados foi preservada após a limpeza, mantendo uma boa quantidade de informações para análise.
+2. A base limpa representa aproximadamente 88,37% da base original. Isso indica que a maior parte dos dados foi preservada após a limpeza, mas a etapa de remoção de duplicatas foi importante para tornar os agrupamentos mais confiáveis.
 
-3. A categoria com maior quantidade de compras foi `ALIMENTOS`, com 384197 registros, representando aproximadamente 52,38% da base limpa. Isso mostra que mais da metade das compras registradas está concentrada nessa categoria.
+3. A categoria `ALIMENTOS` apresentou a maior quantidade de compras, com 384197 registros, representando aproximadamente 52,38% da base limpa. Porém, o ponto mais importante não é apenas dizer que alimentos teve mais compras, mas perceber que a base está muito concentrada em produtos de consumo recorrente.
 
-4. As categorias `HIGIENE` e `LIMPEZA` também tiveram participação relevante, com 137702 registros e 128632 registros, respectivamente. Juntas, elas representam aproximadamente 36,31% da base limpa, reforçando que a base está fortemente concentrada em produtos de consumo recorrente.
+4. Somando `ALIMENTOS`, `HIGIENE` e `LIMPEZA`, temos 650531 registros, o que representa aproximadamente 88,70% da base limpa. Isso mostra que quase 9 em cada 10 registros estão ligados a produtos essenciais ou de reposição frequente. Para um dashboard de BI, essas três categorias deveriam receber destaque especial, pois explicam quase todo o volume da base.
 
-5. No agrupamento por gênero, os clientes do gênero feminino apresentaram 382427 compras, aproximadamente 52,14% da base limpa. Os clientes do gênero masculino apresentaram 351020 compras, cerca de 47,86%. A diferença existe, mas não é extremamente alta, indicando uma distribuição relativamente equilibrada entre os gêneros.
+5. No agrupamento por gênero, os clientes do gênero feminino apresentaram 382427 compras, aproximadamente 52,14% da base limpa, enquanto os clientes do gênero masculino apresentaram 351020 compras, cerca de 47,86%. A diferença existe, mas não é extrema. Isso sugere que o comportamento de compra está mais relacionado ao tipo de produto e à recorrência das categorias do que a uma diferença muito forte entre gêneros.
 
-6. Na análise mensal, outubro de 2021 teve o maior volume de compras, com 28575 registros, aproximadamente 3,90% da base limpa. Já setembro de 2022 teve apenas 1297 registros, cerca de 0,18%, indicando uma queda forte no volume registrado nesse período. Esse ponto poderia ser investigado em uma análise futura para verificar se houve redução real de vendas, falha de registro ou base incompleta.
+6. A análise mensal mostrou que outubro de 2021 teve o maior volume de compras, com 28575 registros, aproximadamente 3,90% da base limpa. Já setembro de 2022 teve apenas 1297 registros, cerca de 0,18%. Essa queda merece investigação futura, pois pode indicar redução real de compras, falha de registro, mudança no período de coleta ou base incompleta nesse mês.
