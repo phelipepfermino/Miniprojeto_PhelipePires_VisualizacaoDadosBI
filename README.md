@@ -20,19 +20,21 @@ A base original possui 830000 registros e 14 colunas. Durante a análise, 4 colu
 
 ## Estrutura do projeto
 
-```text
 Miniprojeto_PhelipePires_VisualizacaoDadosBI/
-│
+
 ├── dados/
+
 │   ├── Varejo.csv
+
 │   └── varejo_limpo.csv
-│
+
 ├── src/
+
 │   └── miniprojeto_varejo.py
-│
+
 ├── README.md
+
 └── README_PhelipePires_VisualizacaoDadosBI.md
-```
 
 ## Organização por Sprints
 
@@ -44,26 +46,26 @@ A base `Varejo.csv` foi carregada com pandas. Foram exibidos número de registro
 
 Foram realizadas as seguintes transformações:
 
-- Remoção de colunas totalmente vazias.
-- Padronização dos nomes das colunas.
-- Renomeação das colunas para nomes mais claros.
-- Limpeza de espaços extras em textos.
-- Conversão da coluna `data` para o tipo `datetime`.
-- Conversão de colunas numéricas.
+* Remoção de colunas totalmente vazias.
+* Padronização dos nomes das colunas.
+* Renomeação das colunas para nomes mais claros.
+* Limpeza de espaços extras em textos.
+* Conversão da coluna `data` para o tipo `datetime`.
+* Conversão de colunas numéricas.
 
 Renomeações principais:
 
-| Nome original | Nome usado no projeto |
-|---|---|
-| `CO_ID` | `compra_id` |
-| `CL_ID` | `cliente_id` |
-| `CL_GENERO` | `cliente_genero` |
-| `CL_EC` | `cliente_estado_civil` |
-| `CL_FHL` | `cliente_numero_filhos` |
-| `CL_SEG` | `cliente_segmento` |
-| `PR_ID` | `produto_id` |
-| `PR_CAT` | `produto_categoria` |
-| `PR_NOME` | `produto_nome` |
+| Nome original | Nome usado no projeto   |
+| ------------- | ----------------------- |
+| `CO_ID`       | `compra_id`             |
+| `CL_ID`       | `cliente_id`            |
+| `CL_GENERO`   | `cliente_genero`        |
+| `CL_EC`       | `cliente_estado_civil`  |
+| `CL_FHL`      | `cliente_numero_filhos` |
+| `CL_SEG`      | `cliente_segmento`      |
+| `PR_ID`       | `produto_id`            |
+| `PR_CAT`      | `produto_categoria`     |
+| `PR_NOME`     | `produto_nome`          |
 
 ### Sprint 3 - Limpeza de nulos e duplicatas
 
@@ -75,47 +77,64 @@ As categorias vazias ou inválidas foram substituídas por `"Sem Categoria"`. Os
 
 A coluna `cliente_numero_filhos` foi analisada com:
 
-- média;
-- mediana;
-- desvio padrão;
-- moda;
-- máximo;
-- mínimo;
-- contagem.
+* média;
+* mediana;
+* desvio padrão;
+* moda;
+* máximo;
+* mínimo;
+* contagem.
 
 ### Sprint 5 - Relatório e documentação
 
 Foram criados agrupamentos usando `groupby()` para observar:
 
-- quantidade de compras por categoria;
-- quantidade de compras por gênero;
-- quantidade de compras por mês.
+* quantidade de compras por categoria;
+* quantidade de compras por gênero;
+* quantidade de compras por mês.
 
 Também foi gerado o arquivo `dados/varejo_limpo.csv`.
 
 ### Sprint 6 - Versionamento
 
-O projeto deve ser enviado para um repositório público no GitHub.
+O projeto foi enviado para um repositório público no GitHub.
+
+## Resumo dos resultados
+
+| Item analisado                          | Resultado |
+| --------------------------------------- | --------: |
+| Registros na base original              |    830000 |
+| Colunas na base original                |        14 |
+| Registros após limpeza                  |    733447 |
+| Colunas após limpeza                    |        11 |
+| Colunas vazias removidas                |         4 |
+| Registros duplicados removidos          |     96553 |
+| Categorias vazias ou inválidas tratadas |      3650 |
+| Datas inválidas encontradas             |         0 |
+
+## Interpretação dos tratamentos realizados
+
+Durante a análise, foram identificadas quatro colunas totalmente vazias: `Unnamed: 10`, `Unnamed: 11`, `Unnamed: 12` e `Unnamed: 13`. Essas colunas foram removidas porque não possuíam informação útil para a análise.
+
+Também foram encontrados registros duplicados. A remoção dessas duplicatas foi importante para evitar contagens repetidas nos agrupamentos por categoria, gênero e mês.
+
+Na coluna `produto_categoria`, valores vazios ou inválidos foram tratados como `Sem Categoria`. Essa escolha permitiu preservar os registros na base, sem eliminar linhas que ainda possuíam outras informações relevantes.
+
+A coluna `DATA` foi convertida para o tipo `datetime`, permitindo a criação da coluna `mes` e a análise das compras ao longo do tempo.
 
 ## Como executar
 
 No terminal do VS Code, execute:
 
-```bash
-pip install pandas
-```
+`pip install pandas`
 
 Depois execute:
 
-```bash
-python src/miniprojeto_varejo.py
-```
+`python src/miniprojeto_varejo.py`
 
 Se o comando `python` não funcionar, use:
 
-```bash
-py src/miniprojeto_varejo.py
-```
+`py src/miniprojeto_varejo.py`
 
 ## Reflexão sobre ETL e qualidade dos dados
 
